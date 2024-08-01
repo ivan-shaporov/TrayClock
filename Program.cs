@@ -1,10 +1,10 @@
 ﻿using System.Timers;
 using Timers = System.Timers;
+
 namespace TrayHeartRate
 {
     internal class Program
     {
-
         private static readonly Font font = new("Arial Narrow", 27, FontStyle.Bold);
         private static readonly Brush textBrush = Brushes.White;
         private static readonly Brush backgroundBrush = Brushes.Black;
@@ -18,10 +18,7 @@ namespace TrayHeartRate
             ContextMenuStrip = new ContextMenuStrip(),
         };
 
-        private static void Timer_Elapsed(object? sender, ElapsedEventArgs e)
-        {
-            RereshIcon();
-        }
+        private static void Timer_Elapsed(object? sender, ElapsedEventArgs e) => RereshIcon();
 
         private static void RereshIcon()
         {
